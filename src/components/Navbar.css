@@ -1,0 +1,55 @@
+/* Estilo para el contenedor principal */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el header cubra todo el ancho de la página */
+    padding: 20px calc(10%); /* Ajusta márgenes internos sin causar desbordamientos */
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box; /* Incluye padding dentro del ancho total */
+    overflow: hidden; /* Evita desbordes */
+}
+
+/* Logo */
+.logo {
+    font-size: 32px;
+    color: white;
+    font-weight: 700;
+    margin-right: auto; /* Mantiene el logo alineado a la izquierda */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    gap: 40px; /* Espacio entre enlaces */
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten en pantallas pequeñas */
+}
+
+/* Estilo de los enlaces */
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Efecto hover en los enlaces */
+.navbar a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Línea bajo el texto */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease; /* Transición suave */
+}
+
+.navbar a:hover::before {
+    width: 100%; /* La línea se expande en hover */
+}
