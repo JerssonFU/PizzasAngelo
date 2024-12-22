@@ -1,19 +1,24 @@
+// Navbar.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css'; // Mantenemos los estilos externos
+import './Navbar.css';  // Asegúrate de tener el archivo CSS adecuado
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <header className="header">
-      <div className="logo">MiLogo</div>
-      <nav className="navbar">
-        <Link to="/">Inicio</Link>
-        <Link to="/about">Acerca de</Link>
-        <Link to="/services">Servicios</Link>
-        <Link to="/contact">Contacto</Link>
+      {/* Contenedor para el logo */}
+      <div className="logo-container">
+        <Link to="/" className="logo">PizzasAngelo</Link>
+      </div>
+      {/* Contenedor para los enlaces */}
+      <nav className="navbar-links">
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/store">Store</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
     </header>
   );
-};
+}
 
-export default NavBar;
+export default Navbar;
